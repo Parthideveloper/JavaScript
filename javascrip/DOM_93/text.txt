@@ -1,0 +1,17 @@
+what is LocalStorage ?
+
+In Web development, LocalStorage is part of the Web Storage API, which allows you to store Key-value pairs locally in the user's Web browser. It provides persistent Storage that remains even when the browser is closed and reopened.
+
+
+The localStorage object is property of the window object in the browser's JavaScriptenvironment. It provides the following methods to interact with the stored data:
+
+
+* localStorage.setItem(key, value) :--> This method sets a value in localstorage for a given key. The key and value are stored and strings
+
+
+* localStorage.getItem(key) :--> This method retrieves the value associated with a given key from localstorage. If the key does not exist, it returns null.
+
+
+* localstorage.removeItem(key) :--> This method removes a key-value pair from localstorage based on the provided key.
+
+* localstorage.Clear() :--> This method removes all key-value pairs from localStorage, effectively clearing the entire storage.

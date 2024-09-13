@@ -1,0 +1,20 @@
+map 
+filter
+reduce
+slice
+splice 
+concat 
+sort 
+fill 
+incldues 
+join 
+reverse 
+push 
+pop 
+shift 
+unshift 
+indexof 
+lastindexof 
+every and some 
+primitive and reference data type 
+p

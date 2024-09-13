@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>step2</title>
+          <link rel="stylesheet" href="style96.css">
+</head>
+<body>
+          
+     <div class="container">
+                    <h1>Multi-Step Form Session Storage</h1>
+
+                    <h2>Step-2 Additional Details</h2>
+
+                    <form >
+                              <label for="adress">Address :</label>
+                              <input type="text" id="adress" placeholder="Full Address">
+
+                              <label for="phone">Phone :</label>
+                              <input type="number" id="phone" placeholder=" Enter contact number ">
+
+                              <button type="button" id="btnStep1Back"> Back</button>
+
+                              <button type="button" id="btnStep2Next"> Next Step</button>
+
+
+                    </form>
+          </div>
+          
+          <script>
+                    const address = document.getElementById("adress");   
+                    const phone = document.getElementById("phone");   
+                    const btnStep1Back = document.getElementById("btnStep1Back");   
+                    const btnStep2Next = document.getElementById("btnStep2Next"); 
+                    
+
+
+                    function loadSession(){
+                              let  data = sessionStorage.getItem("formData") || {};
+                              if(data.length>0){
+                                        data = JSON.parse(data);
+                                        address.value = data.address == undefined? "" : data.address;
+                                        phone.value = data.phone == undefined? "" : data.phone;                    
+                             
+                    }
+                    }
+                    
+                    loadSession();
+                    
+                    btnStep1Back.addEventListener("click", function(){
+                              window.location.href = "http://127.0.0.1:5500/DOM_96/index.html";
+                    });
+
+
+
+                    btnStep2Next.addEventListener("click", function(){
+                              
+                              if(address.value!="" && phone.value!=""){
+                                        const formData = JSON.parse(sessionStorage.getItem("formData")) || {};
+                    
+                                        formData.address = address.value;
+                                        formData.phone = phone.value;
+                    
+                                        sessionStorage.setItem("formData",JSON.stringify(formData));
+                    
+                                        window.location.href = "http://127.0.0.1:5500/DOM_96/view.html";
+                    
+                                       
+                              }
+                              else{
+                                        alert("Please fill all Details");
+                                        address.focus();
+                              }
+                              
+                    });
+          </script>
+</body>
+</html>

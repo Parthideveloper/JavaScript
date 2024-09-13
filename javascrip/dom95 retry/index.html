@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+          <title>Document</title>
+          <link rel="stylesheet" href="retrycss.css">
+</head>
+<body>
+
+          <div class="container">
+                    <h1>CRUD with Local Storage </h1>
+                    <form id="dataForm">
+                              <label for="nameInput">Name:</label>
+                              <input type="text" id="nameInput"  required>
+
+                              <label for="ageInput">Age:</label>
+                              <input type="number" id="ageInput" min="1" max="99" maxlength="2">
+
+                              <label for="genderSelect">Gender:</label>
+                              <select id="genderSelect" required>
+                                        <Option value="">Select Gender</Option>
+                                        <Option value="Male">Male</Option>
+                                        <Option value="Female">Female</Option>
+                              </select>
+
+                              <button type="submit">Add Data</button>  
+                    </form>
+
+                   <div id="output">
+                    <h2>Stored Data</h2>
+                    <table id="dataTable">
+                              <thead>
+                                        <tr>
+                                                  <th>Name</th>
+                                                  <th>Age</th>
+                                                  <th>Gender</th>
+                                                  <th>Edit</th>
+                                                  <th>Delete</th>
+                                        </tr>
+                              </thead>
+
+                              <tbody id="dataList">
+                                        
+                              </tbody>
+                    </table>
+                   </div>
+          </div>
+
+
+         <!-- Edit Model -->
+        <div class="model">
+          <div class="model-content">
+                    <span class="close">&times;</span>
+                    <h2>Edit Data List</h2>
+                    <form id="editForm">
+                      <input type="hidden" id="editInput">
+                              <label for="editNameInput">Name:</label>
+                              <input type="text" id="editNameInput" required>
+
+                              <label for="editAgeInput">Age:</label>
+                              <input type="number" id="editAgeInput" required>
+
+                              <label for="editGenderSelect">Gender:</label>
+                              <select id="editGenderSelect">
+                                        <Option value="">Select Gender</Option>
+                                        <Option value="Male">Male</Option>
+                                        <Option value="Female">Female</Option>
+                              </select>
+
+                              <button type="submit">Save Changes</button>     
+                    </form>
+                    
+          </div>
+        </div>
+
+
+
+
+
+
+
+          <script src="retry.js"></script>
+</body>
+</html>
